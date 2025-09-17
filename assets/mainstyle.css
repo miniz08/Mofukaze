@@ -1,0 +1,40 @@
+html
+{
+  
+}
+body
+{
+    .grid-container
+    {
+        position: relative;
+        top: 100px;
+        width: 100%;
+        height: 700px;
+        background-color: cornsilk;
+        display: grid;
+        grid-template-areas: 
+        'aside main main main right'
+        'aside main main main right'
+        'aside main main main right'
+        'aside footer footer footer footer';
+        gap: 10px;
+    }
+    .aside
+    {
+        grid-area: aside;
+    }
+    .main
+    {
+        font-family: Papyrus;
+        grid-area: main;
+    }
+    .right
+    {
+        grid-area: right;
+    }
+    .footer
+    {
+        grid-area: footer;
+    }
+    
+}

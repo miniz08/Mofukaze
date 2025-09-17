@@ -1,0 +1,78 @@
+
+body
+{
+    background: cornsilk;
+
+    .icongit
+    {
+        font-size: 36px;
+        color: black;
+        padding: 10px;
+        top: 6px;
+        right: 166px;
+        position: fixed;
+        background-color: transparent;
+    }
+    .iconbili
+    {
+        font-size: 36px;
+        color: black;
+        padding: 10px;
+        top: 6px;
+        right: 236px;
+        position: fixed;
+        background-color: transparent;
+    }
+    .icontwi
+    {
+        font-size: 36px;
+        color: black;
+        padding: 10px;
+        top: 6px;
+        right: 306px;
+        position: fixed;
+        background-color: transparent;
+    }
+    .flex-container
+    {
+        width:100% ;
+        float: left;
+        display: flex;
+        flex-direction: row;;
+        position: fixed;
+        background-color:cornsilk ;
+        z-index: 1;
+    }
+    .flex-container #header
+    { 
+        font-size: large;
+        width: 900.4px;
+        height: 36px;
+        align-self: center;
+        padding: 20px;
+        font-family:喵字摄影体;
+    }
+    .flex-container a
+    {
+        width: 60px;
+        aspect-ratio: 1/1;
+        background-color:cornsilk ;
+    }
+    .flex-container a button
+    {
+        color: black;
+        width: 60px;
+        aspect-ratio: 1/1;
+        background-color: cornsilk;
+        border: none;
+        transition: 0.2s;
+        font-family:Papyrus ;
+    }
+    .flex-container button:hover
+    {
+        aspect-ratio: inherit;
+        transform: scale(1.2);
+        background-color: inherit;
+        border: solid;
+    }
+}

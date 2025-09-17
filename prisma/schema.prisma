@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  content   String @db.LongText
+  posttime  DateTime @default(now())
+  articleId Int
+  article      Article? @relation(fields: [articleId], references: [id], map: "Comment_articleId_fkey")
+  collectionId Int?
+  collection   Collection? @relation(fields: [collectionId], references: [id], map: "Comment_collectionId_fkey")
+
+  @@index([articleId], map: "Comment_articleId_fkey")
+  @@index([collectionId], map: "Comment_collectionId_fkey")
+}
+
+model Article {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String @db.LongText
+  tag String
+  subTag String   @default("default_value")
+  posttime  DateTime @default(now())
+  comments  Comment[]
+}
+
+model Collection{
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String @db.LongText
+  tag String
+  posttime  DateTime @default(now())
+  comments  Comment[]
+  imageUrl  String
+}
